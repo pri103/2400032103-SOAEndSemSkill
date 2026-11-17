@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\SOAEndSemSkill\.metadata\.plugins\org.eclipse.jdt.core
+3545840243.index
+1029135199.index
+2757626597.index
+1865797976.index

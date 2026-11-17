@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  organizationservice-1:
+    build:
+      context: ./organizationservice-1
+      dockerfile: Dockerfile
+    image: organizationservice-1:latest
+    container_name: organizationservice-1-container
+    ports:
+      - "8081:8081"
+    networks:
+      - microservices-network
+
+  organizationservice-2:
+    build:
+      context: ./organizationservice-2
+      dockerfile: Dockerfile
+    image: organizationservice-2:latest
+    container_name: organizationservice-2-container
+    ports:
+      - "8082:8082"
+    networks:
+      - microservices-network
+
+  organizationservice-3:
+    build:
+      context: ./organizationservice-3
+      dockerfile: Dockerfile
+    image: organizationservice-3:latest
+    container_name: organizationservice-3-container
+    ports:
+      - "8083:8083"
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    driver: bridge
+
